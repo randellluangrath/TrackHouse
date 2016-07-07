@@ -142,15 +142,14 @@ body
   opacity: 1.0;
   /* for IE8 and earlier */
   filter: alpha(opacity=100);
+  		-webkit-transition: all 0.2s ease-in-out; 
+  	  -moz-transition: all 0.2s ease-in-out;  
+	    	-o-transition: all 0.2s ease-in-out;  
+   				 transition: all 0.2s ease-in-out; 
 }
 
 .p-container img:hover 
-{
-		-webkit-transition: all 0.2s ease-in-out; 
-  	  -moz-transition: all 0.2s ease-in-out;  
-	    	-o-transition: all 0.2s ease-in-out;  
-   				 transition: all 0.2s ease-in-out;  
-
+{  
 	    opacity: 0.4;
     /* for IE8 and earlier */
     filter: alpha(opacity=40);
