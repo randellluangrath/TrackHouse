@@ -5,8 +5,7 @@
  if (sel == ""){
  		document.getElementById("display-data").innerHTML = "";
  		return;
- } else {
- 		if (window.XMLHttpRequest){
+ } else if (window.XMLHttpRequest){
 				// IE7+, FF, Chrome, Opera, Safari
 				xmlhttp = new XMLHttpRequest();
  		} else {
@@ -23,7 +22,6 @@
  	};
  	xmlhttp.open("GET","getLetter.php?q="+sel, true);
  	xmlhttp.send();
-	}
 }
 // end of selectQ function
 
@@ -34,19 +32,15 @@
 			var text = document.getElementById("searchText").value;
 
 			// if text field is empty, do nothing
-			if(text == "")
-			{
+			if(text == ""){
 
-			}else
-
+			}
+			else
 				selectQ(text);
-
-
 		}
 // end of input search on enter
 
 </script>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -176,14 +170,14 @@
 		  <img src="imgs/icon2.png" style="height: 20px; width: 20px;">
 		</button>
 	</div>
-		<form>
 
+		<form>
 	<input type="text" id="searchText" class="form-control" name="text" placeholder="Search..."aria-label="" onkeypress="
+
 		if(event.keyCode == 13){
-				search();;
-				}
-		" 
-		/>
+			search();
+				}" 
+				/>
 		</form>
 	</div>
 </div>
