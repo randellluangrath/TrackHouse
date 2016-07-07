@@ -1,0 +1,93 @@
+<script type="text/javascript">
+// changeImg function
+function changeImg() {
+    var img = document.getElementById('k-Mood');
+    if (img.src == ("http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=67984550")) {
+        img.src = ("http://fraisfrais.com/wp-content/uploads/2014/06/K-happy.jpg");
+    } else {
+        img.src = ("http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=67984550");
+    }
+}
+// end of changeImg function
+
+// changeBackground function
+
+var total = 3;
+function changeBackground() {
+var num = Math.ceil( Math.random() * total );
+document.body.background = 'imgs/'+num+'.jpg';
+document.body.style.backgroundRepeat = "repeat";// Background repeat
+}
+
+	if(num == 1){
+			document.getElementById('nav').style.backgroundColor= "black";
+	}
+			else if(num == 2){
+				document.getElementById('nav').style.backgroundColor= "white";
+	  	}
+	  		else 
+	  			document.getElementById('nav').style.backgroundColor = "lightblue";
+// end of changeBackground function
+
+var textCont = document.getElementById('text');
+
+textCont.style.opacity = 0;
+
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TrackHouse</title>
+
+<!-- Style Sheet -->
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Mobile First -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+
+<body>
+
+<!-- Nav Container -->
+<nav class="navbar navbar-default" id="nav-front">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="index.html" id="logo">
+      trackhouse
+      </a>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="about.html">About</a></li>
+      <li><a href="table.html">View(s)</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!--Nav Container-->
+
+<div class="container-fluid">
+
+	<h1 id="front-h">Kanye</h1><br><h1 id="front-h-2">West</h1>
+
+	<a href="about.html" class="imgHover"><img src="imgs/arrowright.png" id="imgFix"></a>
+
+<div class="fullscreen-bg">
+    <video muted autoplay poster="imgs/kclip1.png" class="fullscreen-bg__video">
+        <source src="vids/kclip.m4v" type="video/webm"> 
+    </video>
+</div>
+
+</div>
+<!--Content Container-->
+
+
+
+</body>
+</html>

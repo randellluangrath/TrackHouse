@@ -1,0 +1,213 @@
+<script>
+// selectQ function AJAX AF
+	function selectQ(sel){
+
+ if (sel == ""){
+ 		document.getElementById("display-data").innerHTML = "";
+ 		return;
+ } else {
+ 		if (window.XMLHttpRequest){
+				// IE7+, FF, Chrome, Opera, Safari
+				xmlhttp = new XMLHttpRequest();
+ 		} else {
+			// IE6, IE5
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+ }
+ xmlhttp.onreadystatechange = function(){
+ 	if (xmlhttp.readyState == 4 && xmlhttp.status == 200 && sel == document.getElementById("searchText").value){
+ 		document.getElementById("display-data").innerHTML = xmlhttp.responseText;
+ 	} 
+ 	else if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+ 			document.getElementById("display-data").innerHTML = xmlhttp.responseText;
+ 		}
+ 	};
+ 	xmlhttp.open("GET","getLetter.php?q="+sel, true);
+ 	xmlhttp.send();
+	}
+}
+// end of selectQ function
+
+// input search on enter
+	function search(){
+
+			event.preventDefault();
+			var text = document.getElementById("searchText").value;
+
+			// if text field is empty, do nothing
+			if(text == "")
+			{
+
+			}else
+
+				selectQ(text);
+
+
+		}
+// end of input search on enter
+
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Style Sheet -->
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<title>TrackHouse</title>
+</head>
+<body>
+
+<!-- Nav Container -->
+<nav class="navbar navbar-default" id="navTable">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="index.html" id="logo">
+      trackhouse
+      </a>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="about.html">About</a></li>
+      <li><a href="table.html">View(s)</a></li>
+    </ul>
+
+
+  </div>
+</nav>
+
+<!--Nav Container-->
+<!-- Container -->
+<div class="container-fluid">
+<!--Hand Rail for Alphabet-->
+<div class="input-group center">
+	<div class="input-group-btn">
+		<button type="button" class="btn btn-default" aria-label="ALL" onclick="selectQ(' ')">
+		*
+		</button>
+		<button type="button" class="btn btn-default" aria-label="A" onclick="selectQ('num')">
+		#
+		</button>
+		<button type="button" class="btn btn-default" aria-label="A" onclick="selectQ('a')">
+		A
+		</button>
+		<button type="button" class="btn btn-default" aria-label="B" onclick="selectQ('b')">
+		B
+		</button>
+		<button type="button" class="btn btn-default" aria-label="C" onclick="selectQ('c')">
+		C
+		</button>
+		<button type="button" class="btn btn-default" aria-label="D" onclick="selectQ('d')">
+		D
+		</button>
+	  <button type="button" class="btn btn-default" aria-label="E" onclick="selectQ('e')">
+		E
+		</button>
+		<button type="button" class="btn btn-default" aria-label="F" onclick="selectQ('f')">
+		F
+		</button>
+		<button type="button" class="btn btn-default" aria-label="G" onclick="selectQ('g')">
+		G
+		</button>
+		<button type="button" class="btn btn-default" aria-label="H" onclick="selectQ('h')">
+		H
+		</button>
+		<button type="button" class="btn btn-default" aria-label="I" onclick="selectQ('i')">
+		I
+		</button>
+		<button type="button" class="btn btn-default" aria-label="J" onclick="selectQ('j')">
+		J
+		</button>
+		<button type="button" class="btn btn-default" aria-label="K" onclick="selectQ('k')">
+		K
+		</button>
+		<button type="button" class="btn btn-default" aria-label="L" onclick="selectQ('l')">
+		L
+		</button>
+		<button type="button" class="btn btn-default" aria-label="M" onclick="selectQ('m')">
+		M
+		</button>
+		<button type="button" class="btn btn-default" aria-label="N" onclick="selectQ('n')">
+		N
+		</button>
+		<button type="button" class="btn btn-default" aria-label="O" onclick="selectQ('o')">
+		O
+		</button>
+		<button type="button" class="btn btn-default" aria-label="P" onclick="selectQ('p')">
+		P
+		</button>
+		<button type="button" class="btn btn-default" aria-label="Q" onclick="selectQ('q')">
+		Q
+		</button>
+		<button type="button" class="btn btn-default" aria-label="R" onclick="selectQ('r')">
+		R
+		</button>
+		<button type="button" class="btn btn-default" aria-label="S" onclick="selectQ('s')">
+		S
+		</button>
+		<button type="button" class="btn btn-default" aria-label="T" onclick="selectQ('t')">
+		T
+		</button>
+		<button type="button" class="btn btn-default" aria-label="U" onclick="selectQ('u')">
+		U
+		</button>
+		<button type="button" class="btn btn-default" aria-label="V" onclick="selectQ('v')">
+		V
+		</button>
+		<button type="button" class="btn btn-default" aria-label="W" onclick="selectQ('w')">
+		W
+		</button>
+		<button type="button" class="btn btn-default" aria-label="X" onclick="selectQ('x')">
+		X
+		</button>
+		<button type="button" class="btn btn-default" aria-label="Y" onclick="selectQ('y')">
+		Y
+		</button>
+		<button type="button" class="btn btn-default" aria-label="Z" onclick="selectQ('z')">
+		Z
+		</button>
+
+		<button type="button" class="btn btn-default" aria-label="Z" onclick="
+		  search()">
+		  <img src="imgs/icon2.png" style="height: 20px; width: 20px;">
+		</button>
+	</div>
+		<form>
+
+	<input type="text" id="searchText" class="form-control" name="text" placeholder="Search..."aria-label="" onkeypress="
+		if(event.keyCode == 13){
+				search();;
+				}
+		" 
+		/>
+		</form>
+	</div>
+</div>
+
+<!-- Container -->
+<!--Hand Rail for Alphabet-->
+
+<!-- Table -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12">
+			<div id="display-data">
+
+				<h1 class="center" id="table-h">Select a character...</h1>
+			
+
+		</div>
+	</div>
+</div>
+
+
+<!-- Table -->
+</div>
+
+
+</body>
+</html>

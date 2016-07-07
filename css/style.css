@@ -1,0 +1,380 @@
+html *
+{
+   font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+body 
+{
+
+	background-color: #FFFFF3;
+
+}
+
+@keyframes fadein
+{
+   from
+   {
+   	opacity: 0;
+   	/* for IE8 and earlier */
+   	filter: alpha(opacity=0);
+   }
+   to
+   {
+   	opacity: 1;
+   	/* for IE8 and earlier */
+   	filter: alpha(opacity=100); 
+   }
+}
+/* Mozilla FF < 16 */
+@-moz-keyframes fadein
+{
+   from
+   {
+   	opacity: 0;
+   	/* for IE8 and earlier */
+   	filter: alpha(opacity=0);
+   }
+   to
+   {
+   	opacity: 1;
+   	/* for IE8 and earlier */
+   	filter: alpha(opacity=100);
+   }
+}
+/* Safari, CHrome, Opera > 12.1 */
+@-webkit-keyframes fadein
+{
+   from
+   {
+   	opacity: 0;
+   	/* for IE8 and earlier */
+   	filter: alpha(opacity=0);
+   }
+   to
+   {
+   	opacity: 1;
+   	/* for IE8 and earlier */
+   	filter: alpha(opacity=100);
+   }
+}
+/* IE */
+@-ms-keyframes fadein
+{
+   from
+   {
+   	opacity: 0;
+   	/* for IE8 and earlier */
+   	filter: alpha(opacity=0);
+   }
+   to
+   {
+   	opacity: 1;
+   	/* for IE8 and earlier */
+   	filter: alpha(opacity=100);
+   }
+}
+/* Opera < 12.1 */
+@-o-keyframes fadein
+{
+   from
+   {
+   	opacity: 0;
+   	/* for IE8 and earlier */
+   	filter: alpha(opacity=0);
+   }
+   to
+   {
+   	opacity: 1;
+   	/* for IE8 and earlier */
+   	filter: alpha(opacity=100);
+   }
+}
+
+.h-img
+{
+	margin: 25px auto;
+}
+
+.p-container
+{
+		-webkit-animation: fadein 1.5s ease 2s forwards;
+		 -moz-animation: fadein 1.5s ease 2s forwards;
+		   -o-animation: fadein 1.5s ease 2s forwards;
+  			  animation: fadein 1.5s ease 2s forwards;
+  opacity: 0;
+  /* for IE8 and earlier */
+  filter: alpha(opacity=85);
+	position: relative;
+	padding: 10px;
+	background-color: #272625;
+	width: 70%;
+}
+
+.p-container p
+{
+	margin: 20px;
+	padding: 0 10px;
+	font-weight: 100;
+	font-size: 2.0vmax;
+	color: #FFFFF3;	
+
+}
+
+.p-container img
+{
+	margin: 20px auto;
+	background-color: #FFFFF3;
+  padding: 6px;
+  opacity: 1.0;
+  /* for IE8 and earlier */
+  filter: alpha(opacity=100);
+}
+
+.p-container img:hover 
+{
+    opacity: 0.4;
+    /* for IE8 and earlier */
+    filter: alpha(opacity=40);
+
+    -moz-transition: all 0.2s ease-in-out;  
+    	-o-transition: all 0.2s ease-in-out;  
+    		-webkit-transition: all 0.2s ease-in-out;  
+   						  transition: all 0.2s ease-in-out;  
+	
+  			        transform: scale(1.1,1.1);
+}
+
+.navbar-default div.navbar-collapse
+{
+    border-top:none;
+    box-shadow:none;
+}
+
+.round 
+{
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+}
+
+.center
+{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.display-data
+{
+
+	text-align: center;
+}
+
+.nav.navbar-nav.navbar-right
+{
+}
+
+.nav.navbar-nav.navbar-right li a 
+{
+    color: #FFFFF3;
+    font-size: 16px;
+    font-weight: 450;
+}
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('../imgs/kclip1.png') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+
+	.nav.navbar-nav.navbar-right
+	{
+		display: none;
+	}
+
+}
+
+#nav-front{
+	-webkit-animation: fadein 10s ease 1s forwards;
+		 -moz-animation: fadein 10s ease 1s forwards;
+		   -o-animation: fadein 10s ease 1s forwards;
+  			  animation: fadein 10s ease 1s forwards;
+  opacity: 0;
+  position: relative;
+	background-color: #272625; 
+	border: none;
+  box-shadow: none;
+}
+
+
+#front-h
+{
+	-webkit-animation: fadein 0s ease 14s forwards;
+		 -moz-animation: fadein 0s ease 14s forwards;
+		   -o-animation: fadein 0s ease 14s forwards;
+  			  animation: fadein 0s ease 14s forwards;
+  opacity: 0;
+  /* for IE8 and earlier */
+  filter: alpha(opacity=0);
+	font-size: 10em;
+	font-weight: 500;
+	color: #FFFFF3;
+	text-transform: uppercase;
+	letter-spacing: -1.5;
+	margin-left: 5%;
+}
+
+#front-h-2
+{
+	-webkit-animation: fadein 0s ease 14.5s forwards;
+		 -moz-animation: fadein 0s ease 14.5s forwards;
+		   -o-animation: fadein 0s ease 14.5s forwards;
+  			  animation: fadein 0s ease 14.5s forwards;
+  opacity: 0;
+  /* for IE8 and earlier */
+  filter: alpha(opacity=0);
+	font-size: 10em;
+	font-weight: 500;
+	color: #FFFFF3;
+	text-transform: uppercase;
+	letter-spacing: -1.5;
+	margin-left: 5%;
+	margin-top: -6%;
+}
+
+#searchText
+{
+	width: 100%;
+}
+
+#about-h
+{
+	
+	color: #FFFFF3;
+}
+
+#table-h
+{
+	margin: 10px;
+	font-size: 3.0vmax;
+	color: #272625;
+}
+
+#logo
+{
+	font-size: 26px;
+	font-weight: 800;
+	letter-spacing: -1.5px;
+  color: #FFFFF3;
+  text-transform: uppercase;
+}
+
+#navAbout
+{
+		-webkit-animation: fadein 1.5s ease 1s forwards;
+		 -moz-animation: fadein 1.5s ease 1s forwards;
+		   -o-animation: fadein 1.5s ease 1s forwards;
+  			  animation: fadein 1.5s ease 1s forwards;
+  opacity: 0;
+
+	position: relative;
+	background-color: #272625; 
+	border: none;
+  box-shadow: none;
+
+}
+
+#navTable
+{
+	position: relative;
+	background-color: #272625; 
+	border: none;
+  box-shadow: none;
+}
+
+#btnFix
+{
+	float: right;
+}
+
+#btnResize
+{
+	width: auto;
+	padding: 10px;
+}
+
+#imgFix
+{
+		-webkit-animation: fadein 0s ease 14.5s forwards;
+		 -moz-animation: fadein 0s ease 14.5s forwards;
+		   -o-animation: fadein 0s ease 14.5s forwards;
+  			  animation: fadein 0s ease 14.5s forwards;
+  opacity: 0;
+  /* for IE8 and earlier */
+  filter: alpha(opacity=0);
+}
+
+#aboutContentFade
+{
+ 		-webkit-animation: fadein 1.5s ease 3s forwards;
+		 -moz-animation: fadein 1.5s ease 3s forwards;
+		   -o-animation: fadein 1.5s ease 3s forwards;
+  			  animation: fadein 1.5s ease 3s forwards;
+  opacity: 0;
+  /* for IE8 and earlier */
+  filter: alpha(opacity=85);
+}
+
+.imgHover
+{
+	margin-left: 15%;
+	width: 100px;
+
+}
+
+.imgHover img:hover
+{
+		 -moz-transition: all 0.2s ease-in-out;  
+    	-o-transition: all 0.2s ease-in-out;  
+    		-webkit-transition: all 0.2s ease-in-out;  
+   						  transition: all 0.2s ease-in-out;  
+		transform: scale(1.2, 1.2);
+}
+
+
+
+
