@@ -11,4 +11,4 @@ For actual table view funcationality on the website you will <b>NEED</b> to impo
 
 If you have any questions or critiques on how I can improve my practice, please feel free to message me. 
 
-
+Randell.
