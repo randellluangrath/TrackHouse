@@ -90,6 +90,22 @@ body
    }
 }
 
+.imgHover
+{
+	margin-left: 15%;
+	width: 100px;
+
+}
+
+.imgHover img:hover
+{
+		 -moz-transition: all 0.2s ease-in-out;  
+    	-o-transition: all 0.2s ease-in-out;  
+    		-webkit-transition: all 0.2s ease-in-out;  
+   						  transition: all 0.2s ease-in-out;  
+		transform: scale(1.2, 1.2);
+}
+
 .h-img
 {
 	margin: 25px auto;
@@ -130,15 +146,14 @@ body
 
 .p-container img:hover 
 {
-    opacity: 0.4;
+		-webkit-transition: all 0.2s ease-in-out; 
+  	  -moz-transition: all 0.2s ease-in-out;  
+	    	-o-transition: all 0.2s ease-in-out;  
+   				 transition: all 0.2s ease-in-out;  
+
+	    opacity: 0.4;
     /* for IE8 and earlier */
     filter: alpha(opacity=40);
-
-    -moz-transition: all 0.2s ease-in-out;  
-    	-o-transition: all 0.2s ease-in-out;  
-    		-webkit-transition: all 0.2s ease-in-out;  
-   						  transition: all 0.2s ease-in-out;  
-	
   			   
 }
 
@@ -150,9 +165,10 @@ body
 
 .round 
 {
-	border-radius: 15px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
+		-webkit-border-radius: 15px;
+			-moz-border-radius: 15px;
+				-o-border-radius: 15px;
+				   border-radius: 15px;
 }
 
 .center
@@ -356,23 +372,3 @@ body
   /* for IE8 and earlier */
   filter: alpha(opacity=85);
 }
-
-.imgHover
-{
-	margin-left: 15%;
-	width: 100px;
-
-}
-
-.imgHover img:hover
-{
-		 -moz-transition: all 0.2s ease-in-out;  
-    	-o-transition: all 0.2s ease-in-out;  
-    		-webkit-transition: all 0.2s ease-in-out;  
-   						  transition: all 0.2s ease-in-out;  
-		transform: scale(1.2, 1.2);
-}
-
-
-
-
