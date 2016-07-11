@@ -35,7 +35,7 @@ $password = "root";
 $dbname = "trackhouse_db";
 
 // bad words list - array of all the curse words that I can think of
-$badWords = array("ass", "asshole", "bastard", "bitch", "cunt", "damn", "fuck", "fucking", "fucked", "fuckin", "fucker", "goddamn", "hell", "motherfucker", "motherfuckers", "motherfucking", "shit", "nigga", "niggas", "nigger", "niggers", "pussy", "pussies", "dick");
+$badWords = array("ass", "asshole", "bastard", "bitch", "cunt", "damn", "fuck", "fucking", "fucked", "fuckin", "fucker", "fucks", "goddamn", "hell", "motherfucker", "motherfuckers", "motherfucking", "motherfuckin", "shit", "nigga", "niggas", "nigger", "niggers", "pussy", "pussies", "dick", "cock", "titties", "tits", "vagina", "bitchmade", "bitches", "cocaine", "weed", "molly", "joint", "joints", "blunt", "blunts");
 
 // create connection
 $connection = new mysqli($servername, $username, $password, $dbname);
