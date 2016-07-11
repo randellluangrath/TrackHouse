@@ -34,6 +34,9 @@ $username = "root";
 $password = "root";
 $dbname = "trackhouse_db";
 
+// bad words list - array of all the curse words that I can think of
+$badWords = array("ass", "asshole", "bastard", "bitch", "cunt", "damn", "fuck", "fucking", "fucked", "fuckin", "fucker", "fucks", "goddamn", "hell", "motherfucker", "motherfuckers", "motherfucking", "motherfuckin", "shit", "nigga", "niggas", "nigger", "niggers", "pussy", "pussies", "dick", "cock", "titties", "tits", "vagina", "bitchmade", "bitches", "cocaine", "weed", "molly", "joint", "joints", "blunt", "blunts");
+
 // create connection
 $connection = new mysqli($servername, $username, $password, $dbname);
 
@@ -54,8 +57,6 @@ if($connection->connect_error){
 							$sql = "select * from words where word like '".$q."%' 
 								order by frequency desc limit 50";
 
-
-
 $result = $connection->query($sql);
 
 if ($result->num_rows > 0){
@@ -75,12 +76,19 @@ echo '
 
 		echo "<tr>";
 		echo "<td>" . $count . "</td>";
-		echo "<td>" . $row['word'] . "</td>";
+
+		// if word is bad, blur it
+		if (in_array($row['word'], $badWords)){
+			echo '<td class="censored">' . $row['word'] . "</td>";
+		}
+			else 
+				echo "<td>" . $row['word'] . "</td>";
+
 		echo "<td>" . $row['frequency'] . "</td>";
 		$count++;
-	}
+	} // end of while loop
 echo '</table>';
-}
+} //  end of if statement
 else
 	echo '<h1 class="center" id="table-h">No results...</h1>';
 
