@@ -34,6 +34,12 @@ $username = "root";
 $password = "root";
 $dbname = "trackhouse_db";
 
+// bad words list
+$badWords = array("ass", "asshole", "bastard", "bitch", "cunt", "damn", "fuck", "fucking", "fucked", "fuckin", "fucker", "goddamn", "hell", "motherfucker", "motherfuckers", "motherfucking", "shit", "nigga", "niggas", "nigger", "niggers", "pussy", "pussies");
+
+// get size of array
+$arrLength = count($badWords);
+
 // create connection
 $connection = new mysqli($servername, $username, $password, $dbname);
 
@@ -75,12 +81,16 @@ echo '
 
 		echo "<tr>";
 		echo "<td>" . $count . "</td>";
-		echo "<td>" . $row['word'] . "</td>";
+		if (in_array($row['word'], $badWords)){
+			echo '<td class="censored">' . $row['word'] . "</td>";
+		}
+			else 
+				echo "<td>" . $row['word'] . "</td>";
 		echo "<td>" . $row['frequency'] . "</td>";
 		$count++;
-	}
+	} // end of while loop
 echo '</table>';
-}
+} //  end of if statement
 else
 	echo '<h1 class="center" id="table-h">No results...</h1>';
 
